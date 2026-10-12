@@ -7,7 +7,7 @@ Prepared by: Castro, Calibjo, Valencia
 - [KNIME workflow](Group12_LostFound_Matching.knwf)
 - [Python code](lost_found_matcher.py)
 - [Streamlit app](app.py)
-- [Evaluation report](part6_limitation_evaluation.docx)
+- [Evaluation report](part6_limitation_evaluation.md) / also available as [docx](part6_limitation_evaluation.docx)
 - [Comparison chart](cosine_vs_knn_chart.png)
 - [Screenshots](Screenshots/)
 
