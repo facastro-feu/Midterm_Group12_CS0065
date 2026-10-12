@@ -1,0 +1,68 @@
+item_id,record_type,category,color,brand,location,date,description,matched_id
+R001,reported,backpack,black,Jansport,Library,2026-09-14,black backpack with a small keychain on the zipper,F001
+R002,reported,backpack,black,Nike,Cafeteria,2026-09-16,black nike backpack with white logo and a water bottle pocket,F002
+R003,reported, Wallet ,brown,Fossil,Student Center,2026-09-17,brown leather bifold wallet with a few cards,F003
+R004,reported,phone,black,Apple,Computer Lab,2026-09-18,iphone with cracked screen protector and a clear case,F004
+R005,reported,phone,black,Samsung,Gymnasium,2026-09-19,dark phone with a flower case,F005
+R006,reported,keys,silver,unknown,Parking Lot,2026-09-20,set of three keys with a red rubber tag,F006
+R007,reported,keys,black,Toyota,Main Gate,2026-09-21,car key with toyota logo and black fob,F007
+R008,reported,umbrella,black,UNKNOWN,Bus Stop,2026-09-22,large black folding umbrella with wooden handle,F008
+R009,reported,umbrella,red,unknown,Auditorium,2026-09-23,red umbrella with a broken rib,F009
+R010,reported,water bottle,blue,Hydro Flask,Gymnasium,2026-09-24,blue hydro flask with stickers,F010
+R011,reported,water bottle,green,Nalgene,Library,2026-09-25,water bottle,F011
+R012,reported,Laptop,silver,Apple,Library,2026-09-26,macbook air with a sticker on the lid,F012
+R013,reported,laptop,gray,Lenovo,Computer Lab,2026-09-27,lenovo thinkpad with a scratch near the trackpad,F013
+R014,reported,earphones,white,Apple,Cafeteria,2026-09-28,white wireless earbuds in charging case,F014
+R015,reported,earphones,black,Sony,Bus Stop,2026-09-29,black over-ear headphones,F015
+R016,reported,id card,blue,unknown,Student Center,2026-09-30,student id card in a blue lanyard,F016
+R017,reported,jacket,black,Uniqlo,Engineering Building,2026-10-01,gray zip up hoodie size medium,F017
+R018,reported,jacket,black,north face,Auditorium,2026-10-02,black north face jacket with fleece lining,F018
+R019,reported,book,blue,unknown,Library,2026-10-02,blue data structures textbook with highlights,F019
+R020,reported,eyeglasses,black,unknown,Cafeteria,2026-10-03,black rectangular glasses in brown case,F020
+R021,reported,watch,silver,unknown,Gymnasium,2026-10-04,silver casio digital watch,F021
+R022,reported,calculator,gray,Casio,Engineering Building,2026-10-05,scientific calculator casio fx-991,F022
+R023,reported,charger,white,Apple,Computer Lab,2026-10-05,,F023
+R024,reported,wallet,black,unknown,Bus Stop,2026-10-06,lost my wallet,F024
+R025,reported,phone,red,unknown,Library,2026-10-07,red phone case only,
+R026,reported,backpack,green,unknown,Parking Lot,2026-10-07,dark green backpack with bike helmet clip,
+R027,reported,keys,gold,unknown,Main Gate,2026-10-08,,
+R028,reported,jacket,yellow,unknown,Auditorium,2026-10-08,yellow raincoat,
+R029,reported,earphones,black,Samsung,Gymnasium,2026-10-09,black galaxy buds case,
+R030,reported,water bottle,silver,unknown,Cafeteria,2026-10-09,silver insulated tumbler with straw,
+R031,reported,water bottle,blue,Hydro Flask,Gymnasium,2026-09-24,blue hydro flask with stickers,F010
+F001,recovered,backpack,black,Jansport,Library,2026-09-15,black jansport backpack with keychain attached found near study tables,R001
+F002,recovered,backpack,black,unknown,Cafeteria,2026-09-16,nike backpack black with white swoosh left on a chair,R002
+F003,recovered,wallet,brown,Fossil,Cafeteria,2026-09-18,brown leather wallet found under a table,R003
+F004,recovered,phone,black,Apple,Computer Lab,2026-09-18,black iphone in clear case with cracked screen protector,R004
+F005,recovered,phone,blue,Samsung,Gymnasium,2026-09-20,samsung phone blue with flower pattern case found on bleachers,R005
+F006,recovered,keys,silver,unknown,Parking Lot,2026-09-21,three keys on ring with red rubber key tag,R006
+F007,recovered,keys,black,Toyota,Main Gate,2026-09-28,toyota car key fob black found near guard post,R007
+F008,recovered,umbrella,black,unknown,Bus Stop,2026-09-23,black foldable umbrella wooden handle,R008
+F009,recovered,umbrella,red,unknown,Auditorium,2026-09-24,  RED umbrella with bent rib left in lobby,R009
+F010,recovered,water bottle,blue,Hydro Flask,Auditorium,2026-09-25,blue metal bottle with several stickers,R010
+F011,recovered,water bottle,green,Nalgene,Library,2026-09-26,green plastic bottle with worn label found on shelf,R011
+F012,recovered,laptop,silver,unknown,Library,2026-09-27,silver macbook with sticker on lid in a gray sleeve,R012
+F013,recovered,laptop,black,Lenovo,Computer Lab,2026-09-28,thinkpad laptop found at workstation,R013
+F014,recovered,earphones,white,Apple,Cafeteria,2026-09-28,airpods case white found on table,R014
+F015,recovered,Headphones,black,Sony,Bus Stop,2026-09-30,black sony headphones found on bench,R015
+F016,recovered,id card,blue,unknown,Student Center,2026-10-01,id card with blue lanyard found at information desk,R016
+F017,recovered,jacket,gray,Uniqlo,Engineering Building,2026-10-02,gray hoodie medium found in room 204,R017
+F018,recovered,jacket,black,North Face,Main Gate,2026-10-12,black jacket north face logo fleece inside,R018
+F019,recovered,book,blue,unknown,Library,2026-10-03,blue textbook data structures with yellow highlights,R019
+F020,recovered,eyeglasses,black,unknown,Cafeteria,2026-10-15,black frame glasses in brown hard case,R020
+F021,recovered,watch,silver,Casio,Gymnasium,2026-10-04,casio silver wristwatch found in locker room,R021
+F022,recovered,calculator,gray,Casio,Engineering Building,2026-10-06,casio scientific calculator gray,R022
+F023,recovered,charger,white,Apple,Computer Lab,2026-10-06,white apple laptop charger with cable,R023
+F024,recovered,wallet,black,unknown,Bus Stop,2026-10-07,black cardholder found on bench,R024
+F025,recovered,backpack,black,Jansport,Cafeteria,2026-10-05,black jansport backpack with torn strap,
+F026,recovered,umbrella,blue,unknown,Main Gate,2026-10-06,blue compact umbrella,
+F027,recovered,phone,black,Samsung,Library,2026-10-07,black samsung phone no case,
+F028,recovered,wallet,brown,unknown,Gymnasium,2026-10-08,brown wallet empty,
+F029,recovered,laptop,silver,Dell,Parking Lot,2026-10-08,dell laptop silver found near car,
+F030,recovered,id card,white,unknown,Engineering Building,2026-10-09,white id card,
+F031,recovered,backpack,black,unknown,Library,2026-09-15,black backpack with keychain found under study table,
+F032,recovered,earphones,white,Apple,Student Center,2026-09-29,white earbuds charging case found near counter,
+F033,recovered,phone,black,Apple,Computer Lab,2026-09-19,black iphone with clear case,
+F034,recovered,wallet,black,unknown,Bus Stop,2026-10-06,black wallet with id slots,
+F035,recovered,water bottle,green,unknown,Library,2026-09-25,green water bottle found on table,
+F036,recovered,jacket,black,unknown,Engineering Building,2026-10-02,black zip up hoodie medium,

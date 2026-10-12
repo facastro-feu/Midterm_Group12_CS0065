@@ -1,0 +1,3 @@
+method,top1_accuracy,top3_accuracy,top5_accuracy,mrr,avg_top1_score_true_pairs,avg_top1_score_no_match,no_match_correctly_flagged,coverage
+cosine,0.875,1.0,1.0,0.938,0.842,0.362,0.833,0.833
+knn,0.875,1.0,1.0,0.938,0.658,0.3,0.833,0.833
