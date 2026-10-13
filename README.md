@@ -2,6 +2,7 @@
 
 Prepared by: Castro, Calibjo, Valencia
 
+- [Video Recording](<CALIBJO, CASTRO, VALENCIA _MIDTERM_IS.mp4>)
 - [Dataset](lost_found_dataset.csv)
 - [Data dictionary](data_dictionary.md)
 - [KNIME workflow](Group12_LostFound_Matching.knwf)

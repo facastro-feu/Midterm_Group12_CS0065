@@ -1,21 +1,3 @@
-"""
-Group 12 - Lost and Found Item Matching
-Part 4: Recreate the process in Python
-
-Primary algorithm : Cosine Similarity (weighted fields)
-Comparison        : K-Nearest Neighbors (Euclidean distance)
-
-Steps
-  1. Load the CSV with pandas
-  2. Clean the data (text, categories, duplicates, blank descriptions)
-  3. Prepare comparable features (OneHotEncoder + TF-IDF, with field weights)
-  4. Calculate similarity (cosine_similarity)
-  5. Rank results and filter invalid items
-  6. Return the top 3 or top 5 matches with a short explanation
-
-Run:  python lost_found_matcher.py
-"""
-
 import numpy as np
 import pandas as pd
 from scipy.sparse import hstack, csr_matrix

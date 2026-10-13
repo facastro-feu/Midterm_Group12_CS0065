@@ -1,11 +1,3 @@
-"""
-Group 12 - Lost and Found Item Matching
-Part 6: Cosine vs KNN comparison chart
-
-Runs the Part 4 evaluation for both methods and saves cosine_vs_knn_chart.png.
-Run:  python make_comparison_chart.py
-"""
-
 import matplotlib
 
 matplotlib.use("Agg")
@@ -53,7 +45,9 @@ def draw_panel(ax, res, title, color):
 
     for y, label in [(STRONG_SCORE, "Strong 0.70"), (MIN_SCORE, "Cutoff 0.40")]:
         ax.axhline(y, color=INK_2 if y == MIN_SCORE else MUTED, lw=1, zorder=1)
-        ax.text(1.5, y + 0.012, label, ha="right", va="bottom", fontsize=8.5, color=INK_2)
+        ax.text(
+            1.5, y + 0.012, label, ha="right", va="bottom", fontsize=8.5, color=INK_2
+        )
 
     means = []
     for x, group, _ in groups:
@@ -62,29 +56,68 @@ def draw_panel(ax, res, title, color):
         correct = (group["top1"] == group["true_match"]).to_numpy()
         # No-match items have no "correct" answer, so they are drawn filled like hits.
         filled = correct | (group["true_match"] == "-").to_numpy()
-        ax.scatter(xs[filled], scores[filled], s=64, color=color,
-                   edgecolors=SURFACE, linewidths=2, zorder=3)
-        ax.scatter(xs[~filled], scores[~filled], s=64, facecolors=SURFACE,
-                   edgecolors=color, linewidths=2, zorder=3)
+        ax.scatter(
+            xs[filled],
+            scores[filled],
+            s=64,
+            color=color,
+            edgecolors=SURFACE,
+            linewidths=2,
+            zorder=3,
+        )
+        ax.scatter(
+            xs[~filled],
+            scores[~filled],
+            s=64,
+            facecolors=SURFACE,
+            edgecolors=color,
+            linewidths=2,
+            zorder=3,
+        )
 
         mean = scores.mean()
         means.append(mean)
-        ax.plot([x - 0.3, x + 0.3], [mean, mean], color=INK, lw=2,
-                solid_capstyle="round", zorder=4)
-        ax.text(x + 0.33, mean, f"avg {mean:.2f}", va="center", fontsize=9,
-                color=INK, fontweight="bold")
+        ax.plot(
+            [x - 0.3, x + 0.3],
+            [mean, mean],
+            color=INK,
+            lw=2,
+            solid_capstyle="round",
+            zorder=4,
+        )
+        ax.text(
+            x + 0.33,
+            mean,
+            f"avg {mean:.2f}",
+            va="center",
+            fontsize=9,
+            color=INK,
+            fontweight="bold",
+        )
 
         # Label only the dots the write-up talks about.
         for item_id in ["R013", "R025"]:
             row = group.index[group["reported_id"] == item_id]
             if len(row):
                 i = group.index.get_loc(row[0])
-                ax.annotate(item_id, (xs[i], scores[i]), xytext=(-8, 0),
-                            textcoords="offset points", ha="right", va="center",
-                            fontsize=8.5, color=INK_2)
+                ax.annotate(
+                    item_id,
+                    (xs[i], scores[i]),
+                    xytext=(-8, 0),
+                    textcoords="offset points",
+                    ha="right",
+                    va="center",
+                    fontsize=8.5,
+                    color=INK_2,
+                )
 
-    ax.set_title(f"{title}\nGap between averages: {means[0] - means[1]:.2f}",
-                 loc="left", fontsize=10.5, color=INK, linespacing=1.5)
+    ax.set_title(
+        f"{title}\nGap between averages: {means[0] - means[1]:.2f}",
+        loc="left",
+        fontsize=10.5,
+        color=INK,
+        linespacing=1.5,
+    )
     ax.set_xticks([x for x, _, _ in groups], [lab for _, _, lab in groups])
     ax.set_xlim(-0.5, 1.55)
     ax.set_ylim(0, 1.02)
@@ -111,23 +144,60 @@ def main():
         draw_panel(ax, res, title, color)
     axes[0].set_ylabel("Score of the #1 ranked match", color=INK_2, fontsize=9.5)
 
-    fig.text(0.08, 0.95, "Cosine separates real matches from non-matches more clearly",
-             fontsize=13.5, fontweight="bold", color=INK)
-    fig.text(0.08, 0.905,
-             "Top-1 score for each of the 30 reported items. Both methods rank items "
-             "the same way (87.5% top-1, 100% top-3);\nonly the score scale differs.",
-             fontsize=9.5, color=INK_2, va="top", linespacing=1.4)
+    fig.text(
+        0.08,
+        0.95,
+        "Cosine separates real matches from non-matches more clearly",
+        fontsize=13.5,
+        fontweight="bold",
+        color=INK,
+    )
+    fig.text(
+        0.08,
+        0.905,
+        "Top-1 score for each of the 30 reported items. Both methods rank items "
+        "the same way (87.5% top-1, 100% top-3);\nonly the score scale differs.",
+        fontsize=9.5,
+        color=INK_2,
+        va="top",
+        linespacing=1.4,
+    )
 
     key = [
-        Line2D([], [], ls="", marker="o", ms=8, mfc=INK_2, mec=INK_2,
-               label="Top-1 score of one reported item"),
-        Line2D([], [], ls="", marker="o", ms=8, mfc=SURFACE, mec=INK_2, mew=2,
-               label="#1 was a look-alike (true match ranked #2)"),
+        Line2D(
+            [],
+            [],
+            ls="",
+            marker="o",
+            ms=8,
+            mfc=INK_2,
+            mec=INK_2,
+            label="Top-1 score of one reported item",
+        ),
+        Line2D(
+            [],
+            [],
+            ls="",
+            marker="o",
+            ms=8,
+            mfc=SURFACE,
+            mec=INK_2,
+            mew=2,
+            label="#1 was a look-alike (true match ranked #2)",
+        ),
         Line2D([], [], color=INK, lw=2, label="Group average"),
     ]
-    fig.legend(handles=key, loc="lower left", bbox_to_anchor=(0.075, 0.015), ncol=3,
-               frameon=False, fontsize=9, labelcolor=INK_2, handletextpad=0.4,
-               columnspacing=1.8)
+    fig.legend(
+        handles=key,
+        loc="lower left",
+        bbox_to_anchor=(0.075, 0.015),
+        ncol=3,
+        frameon=False,
+        fontsize=9,
+        labelcolor=INK_2,
+        handletextpad=0.4,
+        columnspacing=1.8,
+    )
 
     fig.savefig(OUTPUT, dpi=200, facecolor=SURFACE)
     print(f"Saved {OUTPUT}")
